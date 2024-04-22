@@ -32,4 +32,4 @@ jobs:
       - name: Invalidate CloudFront Cache
         run: |
           DISTRIBUTION_ID="E1XHJZFQT20NWS"
-          aws cloudfront create-invalidation --distribution-id $DISTRIBUTION_ID --paths "/*"
+          aws cloudfront create-invalidation --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} --paths "/*"
